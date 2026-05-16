@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Pathak | Computational Mechanics & Thermal Transport [cite: 1, 6, 4]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Minimalist base reset and typography smoothing */
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .config-hidden { display: none; }
+    </style>
+</head>
+<body class="bg-brand-50 text-brand-800 leading-relaxed">
+
+    <nav class="w-full max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+        <div class="font-bold text-xl tracking-tight text-brand-900">AP.</div>
+        <div class="space-x-6 text-sm font-medium">
+            <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
+            <a href="#research" class="hover:text-blue-600 transition-colors">Research</a>
+            <a href="mailto:abhishekpathak9066@gmail.com" class="hover:text-blue-600 transition-colors">Contact [cite: 3]</a>
+        </div>
+    </nav>
+
+    <header class="w-full max-w-6xl mx-auto px-6 py-24 md:py-32 flex flex-col justify-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-brand-900 mb-6">
+            Abhishek Pathak [cite: 1]
+        </h1>
+        <p class="text-xl md:text-2xl font-light text-slate-600 max-w-3xl mb-10">
+            Ph.D. in Computational Mechanics[cite: 6]. Specializing in nanoscale thermal transport, machine-learning interatomic potentials, and first-principles modeling.
+        </p>
+        <div class="flex gap-4">
+            <a href="#research" class="px-6 py-3 bg-brand-900 text-white rounded-md font-medium hover:bg-brand-800 transition-all shadow-sm">View Research</a>
+            <a href="https://github.com/abhipath90" target="_blank" class="px-6 py-3 border border-slate-300 rounded-md font-medium hover:border-slate-400 transition-all shadow-sm">GitHub [cite: 24]</a>
+        </div>
+    </header>
+
+    <section id="skills" class="bg-white py-24 border-t border-slate-200">
+        <div class="w-full max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-brand-900">Technical Skills Matrix</h2>
+            <div id="skills-container" class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                </div>
+        </div>
+    </section>
+
+    <section id="research" class="w-full max-w-6xl mx-auto px-6 py-24">
+        <h2 class="text-3xl font-bold mb-16 text-brand-900">Major Research Themes</h2>
+        <div id="projects-container" class="space-y-24">
+            </div>
+    </section>
+
+    <footer class="bg-brand-900 py-12 text-center text-slate-400 text-sm mt-12">
+        <p>Currently a Postdoctoral Research Associate at The George Washington University / NIST[cite: 30, 31].</p>
+    </footer>
+
+    <script>
+        /**
+         * ==========================================
+         * PORTFOLIO CONFIGURATION (EDIT THIS ONLY)
+         * ==========================================
+         * Update graphics, text, and skills here. The layout will adapt automatically.
+         */
+        const portfolioConfig = {
+            skills: [
+                {
+                    category: "Programming & HPC",
+                    items: ["MATLAB (Object Oriented) [cite: 24]", "C (MPI Parallel Computing) [cite: 25]", "Python [cite: 25]", "High Performance Computing [cite: 22]"]
+                },
+                {
+                    category: "Simulation & Modeling",
+                    items: ["VASP & Quantum Espresso ", "LAMMPS & Phonopy ", "ABAQUS & LS-DYNA ", "COMSOL & ANSYS "]
+                },
+                {
+                    category: "Metrology & Instruments",
+                    items: ["FDTR & FD-MOKE [cite: 29]", "E-beam lithography [cite: 29]", "SEM & FIB milling [cite: 29]", "Clean-room operations [cite: 29]"]
+                }
+            ],
+            projects: [
+                {
+                    title: "Semiconductor Thermal Mapping",
+                    role: "Postdoctoral Research Associate (NIST/GWU) [cite: 30, 31]",
+                    graphicUrl: "https://via.placeholder.com/600x400/1e293b/ffffff?text=Thermal+Mapping+Diagram", // Swap URL here
+                    description: "Methodology development for high-throughput spatial mapping of thermal properties in semiconductor materials and devices.",
+                    technicalDetails: ["Developed analytical models for thermal transport in Optical Photothermal Induced Resonance measurements."]
+                },
+                {
+                    title: "Nanoscale Transport in UWBG Alloys",
+                    role: "Postdoctoral Research Associate (CMU) [cite: 37, 38]",
+                    graphicUrl: "https://via.placeholder.com/600x400/1e293b/ffffff?text=UWBG+Alloys+Chart", // Swap URL here
+                    description: "Studied the effect of compositional disorder on nanoscale thermal properties of ultra-wide band-gap (UWBG) semiconductor alloys AlGaN[cite: 41].",
+                    technicalDetails: [
+                        "Methodology development for first-principles based thermal conductivity predictions using machine-learning inter-atomic potentials[cite: 42].",
+                        "Systematic experimental investigation of the virtual crystal approximation for AlGaN thin films[cite: 44]."
+                    ]
+                },
+                {
+                    title: "MCBTE Solver Development",
+                    role: "PhD Candidate (SUNY Buffalo) [cite: 45, 46]",
+                    graphicUrl: "https://via.placeholder.com/600x400/1e293b/ffffff?text=Monte+Carlo+Solver", // Swap URL here
+                    description: "Developed Monte Carlo solver for solving phonon Boltzmann Transport Equation under Relaxation Time Approximation using first-principle phonon properties.",
+                    technicalDetails: [
+                        "Sole developer of research software MCBTE (github.com/abhipath90/MCBTE)[cite: 24, 50].",
+                        "Thermo-mechanical simulation of transient grating experiments using COMSOL[cite: 51]."
+                    ]
+                }
+            ]
+        };
+
+        /**
+         * ==========================================
+         * DOM RENDER ENGINE (DO NOT EDIT)
+         * ==========================================
+         */
+        
+        // Render Skills
+        const skillsContainer = document.getElementById('skills-container');
+        portfolioConfig.skills.forEach(skillBlock => {
+            const blockHtml = `
+                <div>
+                    <h3 class="text-sm uppercase tracking-widest font-bold text-slate-400 mb-4">${skillBlock.category}</h3>
+                    <ul class="space-y-3 font-mono text-sm">
+                        ${skillBlock.items.map(item => `
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                                ${item}
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+            skillsContainer.insertAdjacentHTML('beforeend', blockHtml);
+        });
+
+        // Render Projects
+        const projectsContainer = document.getElementById('projects-container');
+        portfolioConfig.projects.forEach((project, index) => {
+            const isEven = index % 2 === 0;
+            const projectHtml = `
+                <div class="flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center">
+                    <div class="w-full lg:w-1/2">
+                        <div class="bg-slate-200 rounded-lg overflow-hidden shadow-sm border border-slate-200">
+                            <img src="${project.graphicUrl}" alt="${project.title}" class="w-full h-auto object-cover" />
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-blue-600">${project.role}</span>
+                            <h3 class="text-2xl font-bold text-brand-900 mt-2">${project.title}</h3>
+                        </div>
+                        <p class="text-slate-600">${project.description}</p>
+                        <div class="bg-brand-50 p-6 rounded-lg border border-slate-200">
+                            <h4 class="text-sm font-semibold mb-3">Technical Implementation:</h4>
+                            <ul class="space-y-2 text-sm text-slate-700 list-disc list-inside">
+                                ${project.technicalDetails.map(detail => `<li>${detail}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+            projectsContainer.insertAdjacentHTML('beforeend', projectHtml);
+        });
+    </script>
+</body>
+</html>
